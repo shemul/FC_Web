@@ -47,7 +47,7 @@
 					<ul class="header-nav header-nav-options">
 						<li class="header-nav-brand" >
 							<div class="brand-holder">
-								<a href="index.php">
+								<a href="index.html">
 									<span class="text-lg text-bold text-primary">FACULTY CLOUD</span>
 								</a>
 							</div>
@@ -303,7 +303,7 @@
 
 						<!-- BEGIN DASHBOARD -->
 						<li>
-							<a href="index.php" >
+							<a href="index.html" >
 								<div class="gui-icon"><i class="md md-home"></i></div>
 								<span class="title">Dashboard</span>
 							</a>
@@ -324,14 +324,14 @@
 							<!--start submenu -->
 							<ul>
 								<li class="gui-folder">
-									<a href="index.php">
+									<a href="index.html">
 										<span class="title">List all</span>
 									</a>
 									<!--start submenu -->
 								</li><!--end /menu-li -->
 
 								<li class="gui-folder">
-									<a href="add.php">
+									<a href="add.html">
 										<span class="title">Add new Faculty</span>
 									</a>
 									
@@ -418,13 +418,11 @@
 					<div class="col-xs-3">
 						<div class="form-group">
 							<select class="form-control select2-list" id="f_sch_days-<%=index%>" name="skill-<%=index%>" >
-								<option value="Campus 1"></option>
-								<option value="Saturday">Saturday</option>
-								<option value="Sunday">Sunday</option>
-								<option value="Monday">Monday</option>	
-								<option value="Tuesday">Tuesday</option>	
-								<option value="Wednesday">Wednesday</option>	
-								<option value="Thursday ">Thursday</option>
+								<option value="0">Sunday</option>
+								<option value="1">Monday</option>	
+								<option value="2">Tuesday</option>	
+								<option value="3">Wednesday</option>	
+								<option value="4 ">Thursday</option>		
 							</select>
 							<label for="skill-<%=index%>">Day <%=index%></label>
 						</div>
@@ -435,14 +433,22 @@
 						<div class="form-group">
 							<select class="form-control select2-list" id="f_sch_start-<%=index%>" name="skill-<%=index%>" >
 								<option value=""></option>
-								<option value="08:00">08:00 AM</option>
-								<option value="09:00">09:00 AM</option>
-								<option value="10:00">10:00 AM</option>	
-								<option value="11:00">11:00 AM</option>
-								<option value="12:00">12:00 PM</option>
-								<option value="01:00">01:00 PM</option>
-								<option value="02:00">02:00 PM</option>	
-								<option value="03:00">03:00 PM</option>	
+								<option value="08:00">08:00</option>
+								<option value="08:30">08:30</option>
+								<option value="09:00">09:00</option>
+								<option value="09:30">09:30</option>
+								<option value="10:00">10:00</option>	
+								<option value="11:00">11:00</option>
+								<option value="12:00">12:00</option>
+								<option value="12:30">12:30</option>
+								<option value="13:00">13:00</option>
+								<option value="14:00">14:00</option>	
+								<option value="15:00">15:00</option>	
+								<option value="16:00">16:00</option>	
+								<option value="17:00">17:00</option>	
+								<option value="18:00">18:00</option>	
+								<option value="19:00">19:00</option>	
+								<option value="20:00">20:00</option>	
 							</select>
 
 							<label for="skill-<%=index%>">Start <%=index%></label>
@@ -452,14 +458,22 @@
 						<div class="form-group">
 							<select class="form-control select2-list" id="f_sch_end-<%=index%>" name="skill-<%=index%>" >
 								<option value=""></option>
-								<option value="08:00">08:00 AM</option>
-								<option value="09:00">09:00 AM</option>
-								<option value="10:00">10:00 AM</option>	
-								<option value="11:00">11:00 AM</option>
-								<option value="12:00">12:00 PM</option>
-								<option value="01:00">01:00 PM</option>
-								<option value="02:00">02:00 PM</option>	
-								<option value="03:00">03:00 PM</option>		
+								<option value="08:00">08:00</option>
+								<option value="08:30">08:30</option>
+								<option value="09:00">09:00</option>
+								<option value="09:30">09:30</option>
+								<option value="10:00">10:00</option>	
+								<option value="11:00">11:00</option>
+								<option value="12:00">12:00</option>
+								<option value="12:30">12:30</option>
+								<option value="13:00">13:00</option>
+								<option value="14:00">14:00</option>	
+								<option value="15:00">15:00</option>	
+								<option value="16:00">16:00</option>	
+								<option value="17:00">17:00</option>	
+								<option value="18:00">18:00</option>	
+								<option value="19:00">19:00</option>	
+								<option value="20:00">20:00</option>		
 							</select>
 							<label for="skill-<%=index%>">End <%=index%></label>
 						</div>
