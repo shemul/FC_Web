@@ -1,3 +1,14 @@
+<?php
+	
+	session_start();
+	if(!$_SESSION['leamon'] =="green") {
+ 		header('Location: login.php');
+	}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,26 +21,7 @@
 		<meta name="description" content="Short explanation about this website">
 			<!-- BEGIN STYLESHEETS -->
 		<!-- CSS CDN  -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/bootstrap-datepicker/datepicker3.css?1424887858" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/bootstrap.css?1422792965" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/boootstrap.css?1425466319" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/font-awesome.min.css?1422529194" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/material-design-iconic-font.min.css?1421434286" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/select2/select2.css?1424887856" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/multi-select/multi-select.css?1424887857" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/bootstrap-multiselect/bootstrap-multiselect.css?1419109895" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/jquery-ui/jquery-ui-theme.css?1423393666" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/summernote/summernote.css?1425218701" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/bootstrap-colorpicker/bootstrap-colorpicker.css?1424887860" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/bootstrap-tagsinput/bootstrap-tagsinput.css?1424887862" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/typeahead/typeahead.css?1424887863" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/dropzone/dropzone-theme.css?1424887864" />
-		<link type="text/css" rel="stylesheet" href="assets/modal/popModal.min.css" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/DataTables/jquery.dataTables.css?1423553989" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/DataTables/extensions/dataTables.colVis.css?1423553990" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/DataTables/extensions/dataTables.tableTools.css?1423553990" />
-		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/toastr/toastr.css?1425466569" />
+		<?php include 'lib/css.php'; ?>
 		<!-- END STYLESHEETS -->
 
 		<!-- End of CSS CDN -->
@@ -47,7 +39,7 @@
 					<ul class="header-nav header-nav-options">
 						<li class="header-nav-brand" >
 							<div class="brand-holder">
-								<a href="index.html">
+								<a href="index.php">
 									<span class="text-lg text-bold text-primary">FACULTY CLOUD</span>
 								</a>
 							</div>
@@ -72,10 +64,9 @@
 								</span>
 							</a>
 							<ul class="dropdown-menu animation-dock">
-								<li class="dropdown-header">Config</li>
+							
 								<li><a href="#">My profile</a></li>
 								<li class="divider"></li>
-								<li><a href="#"><i class="fa fa-fw fa-lock"></i> Lock</a></li>
 								<li><a href="#"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
 							</ul><!--end .dropdown-menu -->
 						</li><!--end .dropdown -->
@@ -303,7 +294,7 @@
 
 						<!-- BEGIN DASHBOARD -->
 						<li>
-							<a href="index.html" >
+							<a href="index.php" >
 								<div class="gui-icon"><i class="md md-home"></i></div>
 								<span class="title">Dashboard</span>
 							</a>
@@ -324,14 +315,14 @@
 							<!--start submenu -->
 							<ul>
 								<li class="gui-folder">
-									<a href="index.html">
+									<a href="index.php">
 										<span class="title">List all</span>
 									</a>
 									<!--start submenu -->
 								</li><!--end /menu-li -->
 
 								<li class="gui-folder">
-									<a href="add.html">
+									<a href="add.php">
 										<span class="title">Add new Faculty</span>
 									</a>
 									
@@ -488,57 +479,8 @@
 			</li>
 		</script>
 		<!-- END SKILLS TEMPLATES -->
-		<script src="assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
-		<script src="assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
-		<script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
-		<script src="assets/js/libs/spin.js/spin.min.js"></script>
-		<script src="assets/js/libs/autosize/jquery.autosize.min.js"></script>
-		<script src="assets/js/libs/inputmask/jquery.inputmask.bundle.min.js"></script>
-		<script src="assets/js/libs/moment/moment.min.js"></script>
-		<script src="assets/js/libs/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-		<script src="assets/js/libs/bootstrap-multiselect/bootstrap-multiselect.js"></script>
-		<script src="assets/js/libs/bootstrap-rating/bootstrap-rating-input.min.js"></script>
-		<script src="assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
-		<script src="assets/js/libs/microtemplating/microtemplating.min.js"></script>
-		<script src="assets/js/libs/summernote/summernote.min.js"></script>
-		<script src="assets/js/core/source/App.js"></script>
-		<script src="assets/js/core/source/AppNavigation.js"></script>
-		<script src="assets/js/core/source/AppOffcanvas.js"></script>
-		<script src="assets/js/core/source/AppCard.js"></script>
-		<script src="assets/js/core/source/AppForm.js"></script>
-		<script src="assets/js/core/source/AppNavSearch.js"></script>
-		<script src="assets/js/core/source/AppVendor.js"></script>
-		<script src="assets/js/core/demo/Demo.js"></script>
-		<script src="assets/js/core/demo/DemoPageContacts.js"></script>
 
-
-		<!-- messaeg -->
-		<script src="assets/js/libs/jquery-ui/jquery-ui.min.js"></script>
-		<script src="assets/js/libs/toastr/toastr.js"></script>
-		<script src="assets/js/core/demo/DemoUIMessages.js"></script>
-		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-
-		<!-- form -->
-
-
-		<script src="assets/js/libs/select2/select2.min.js"></script>
-		<script src="assets/js/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
-		<script src="assets/js/libs/multi-select/jquery.multi-select.js"></script>
-		<script src="assets/js/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
-		<script src="assets/js/libs/typeahead/typeahead.bundle.min.js"></script>
-		<script src="assets/js/libs/dropzone/dropzone.min.js"></script>
-		<script src="assets/js/core/demo/DemoFormComponents.js"></script>
-
-
-		<!-- modal -->
-		<script src="assets/modal/popModal.min.js"></script>
-
-		<!-- END JAVASCRIPT -->
-
-
-		<script src="http://cdn.socket.io/socket.io-1.2.0.js"></script>
-		<script src="lib/socket.js" type="text/javascript"></script>
-
+		<?php include 'lib/js.php'; ?>
 
 
 		<script type="text/javascript">
@@ -549,30 +491,7 @@
 					//console.log()
 				
 
-					var listItems = $("#skillsList").children();
 
-					var count = listItems.length;
-					for (var i = 1; i <= count; i++) {
-						var schedules_name = $("#f_schedule-" + i).val();
-						var schedules_day = $("#f_sch_days-" + i).val();
-						var schedules_start = $("#f_sch_start-" + i).val();
-						var schedules_end = $("#f_sch_end-" + i).val();
-
-
-						var sch_object = { 
-							
-							"schedules_name" : schedules_name, 
-							"schedules_day"  : schedules_day,
-							"schedules_start" :schedules_start ,
-							"schedules_end"  : schedules_end
-						
-						};
-
-						schedules.push(sch_object);
-
-						
-					}
-					console.log(schedules);
 					/* Act on the event */
 				});
 
@@ -583,6 +502,26 @@
 				})
 
 				$('#addThisPerson').click(function(e) {
+
+
+					//TSF
+					var listItems = $("#skillsList").children();
+					var count = listItems.length;
+					for (var i = 1; i <= count; i++) {
+						var schedules_name = $("#f_schedule-" + i).val();
+						var schedules_day = $("#f_sch_days-" + i).val();
+						var schedules_start = $("#f_sch_start-" + i).val();
+						var schedules_end = $("#f_sch_end-" + i).val();
+						var sch_object = { 
+							"schedules_name" : schedules_name, 
+							"schedules_day"  : schedules_day,
+							"schedules_start" :schedules_start ,
+							"schedules_end"  : schedules_end
+						};
+						schedules.push(sch_object);
+					}
+					console.log(schedules);
+
 					//contact
 					var firstname = $('#firstname').val();
 					var lastname = 	$('#lastname').val();	
