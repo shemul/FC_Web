@@ -27,7 +27,7 @@
 								<img src="assets/img/AIUB_logo.png" alt="" />
 								<span class="profile-info">
 									Office Room
-									<small>Administrator</small>
+									<small>Administration</small>
 								</span>
 							</a>
 							<ul class="dropdown-menu animation-dock">
@@ -59,12 +59,7 @@
 		<!-- BEGIN CONTENT-->
 		<div id="content">
 			<section>
-				<div class="section-header">
-					<ol class="breadcrumb">
-						<li class="active">Faculty List</li>
-<!-- 							<a href="#" data-toggle="modal" id="formMod" faculty-id="3311" data-target="#formModal">Test</a>
--->						</ol>
-</div>
+				
 <div class="section-body">
 	<div class="card">
 
@@ -79,7 +74,17 @@
 				</form>
 			</div>
 			<div class="tools">
-				<a class="btn btn-floating-action btn-default-light" href="add.php"><i class="fa fa-plus"></i></a>
+
+				<?php 
+					
+					if (basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']) == "sheilds.php" ) {
+
+					 } else {
+					 	echo '<a class="btn btn-floating-action btn-default-light" href="add.php"><i class="fa fa-plus"></i></a>';
+					 }
+
+				 ?>
+				
 			</div>
 			<div class="tools">
 			</div>
@@ -104,18 +109,47 @@
 									<a class="tile-content ink-reaction" href="#">All Faculty <small class="pull-right text-bold opacity-75">153</small></a>
 								</li>
 
-								<li><a href="#">ARCH <small class="pull-right text-bold opacity-75">16</small></a></li>
-								<li><a href="#">BBA <small class="pull-right text-bold opacity-75">76</small></a></li>
-								<li><a href="#">CSE<small class="pull-right text-bold opacity-75">76</small></a></li>
-								<li><a href="#">EEE<small class="pull-right text-bold opacity-75">76</small></a></li>
+								<li><a href="#">FBA <small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw " style="color:#008c44" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></small></a></li>
+								<li><a href="#">FE <small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw" style="color:#f7941e" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></small></a></li>
+								<li><a href="#">FSIT<small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw " style="color:#0072bc" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></small></a></li>
+								<li><a href="#">FASS<small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw " style="color:#c5281c" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></small></a></li>
 
 								<li class="hidden-xs"><small>LAST VIEWED</small></li>
 
 
 							</ul>
+
+
 						</div>
+
+
 					</div>
+
+					<div class="card">
+						<div class="card-body no-padding">
+							<ul class="nav nav-pills nav-stacked list">
+
+								<li><small>TOOLS</small></li>
+
+								<li class="active">
+									<a class="tile-content ink-reaction" href="#">All Faculty <small class="pull-right text-bold opacity-75">153</small></a>
+								</li>
+
+								<li><a href="javascript:reload_app();">REBOOT SHELIDS <small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw text-success" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></a></li>
+								
+								<li class="hidden-xs"><small>beta</small></li>
+
+
+							</ul>
+
+
+						</div>
+
+
+					</div>
+
 				</div><!--end .col -->
+
 				<!-- END SEARCH NAV -->
 
 				<div class="col-sm-8 col-md-9 col-lg-10">
@@ -168,84 +202,5 @@
 </div><!--end #content-->
 <!-- END CONTENT -->
 <!-- BEGIN MENUBAR-->
-	<div id="menubar" class="menubar-inverse ">
-				<div class="menubar-fixed-panel">
-					<div>
-						<a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
-							<i class="fa fa-bars"></i>
-						</a>
-					</div>
-					
-				</div>
-				<div class="menubar-scroll-panel">
 
-					<!-- BEGIN MAIN MENU -->
-					<ul id="main-menu" class="gui-controls">
-
-						<!-- BEGIN DASHBOARD -->
-						<li>
-							<a href="index.php" >
-								<div class="gui-icon"><i class="md md-home"></i></div>
-								<span class="title">Dashboard</span>
-							</a>
-						</li><!--end /menu-li -->
-						<!-- END DASHBOARD -->
-
-						<!-- BEGIN EMAIL -->
-						</li><!--end /menu-li -->
-						<!-- END UI -->
-						
-
-						<!-- BEGIN PAGES -->
-						<li class="gui-folder">
-							<a>
-								<div class="gui-icon"><i class="md md-computer"></i></div>
-								<span class="title">Administrator</span>
-							</a>
-							<!--start submenu -->
-							<ul>
-								<li class="gui-folder">
-									<a href="index.php">
-										<span class="title">List all</span>
-									</a>
-									<!--start submenu -->
-								</li><!--end /menu-li -->
-
-								<li class="gui-folder">
-									<a href="add.php">
-										<span class="title">Add new Faculty</span>
-									</a>
-									
-								</li><!--end /menu-li -->
-								<li class="gui-folder">
-									<a href="devices.html">
-										<span class="title">Devices</span>
-									</a>
-									
-								</li><!--end /menu-li -->
-								<li class="gui-folder">
-									<a href="javascript:void(0);">
-										<span class="title">System Status</span>
-									</a>
-									<!--start submenu -->
-									
-								</li><!--end /menu-li -->
-						
-							</ul><!--end /submenu -->
-						</li><!--end /menu-li -->
-						<!-- END FORMS -->
-
-						
-						<!-- END LEVELS -->
-
-					</ul><!--end .main-menu -->
-					<!-- END MAIN MENU -->
-
-					<div class="menubar-foot-panel">
-						<small class="no-linebreak hidden-folded">
-							<span class="opacity-75">Copyright &copy; 2015</span> <strong>NameKiHobe</strong>
-						</small>
-					</div>
-				</div><!--end .menubar-scroll-panel-->
-			</div><!--end #menubar-->
 <!-- END MENUBAR -->

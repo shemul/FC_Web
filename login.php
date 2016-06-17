@@ -27,7 +27,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Material Admin - Login</title>
+		<title>Faculty Cloud- Login</title>
 
 		<!-- BEGIN META -->
 		<meta charset="utf-8">

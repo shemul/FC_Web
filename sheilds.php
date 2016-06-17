@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Faculty Cloud - Faculty List</title>
+	<title>Faculty Cloud - Shelid View</title>
 
 
 	<!-- BEGIN STYLESHEETS -->
@@ -35,14 +35,14 @@
 			    padding: 0px;
 			   
 			    width: 80px;
-			    height: 93px;
+			    height: 81px;
 			}
+
 
 
 	</style>
 </head>
 <body class="menubar-hoverable header-fixed ">
-
 <?php
 
 	include 'lib/nav.php'; 
@@ -287,8 +287,7 @@
 
 <!-- BEGIN JAVASCRIPT -->
 <?php include 'lib/js.php'; ?>
-<!-- core js for socketing -->
-<script src="lib/socket.js" type="text/javascript"></script>
+<script src="lib/sheilds.js" type="text/javascript"></script>
 
 <!-- END JAVASCRIPT -->
 <script type="text/javascript">
@@ -366,7 +365,7 @@
 	  	$("div#"+_id+" div.hbox-column.v-top > div > div.stick-top-right.small-padding").html('<span style ="background-color : #3dbec9 ; color:white;padding:5px">'+f_status+'</span>'); 
 	  }
 
-	  //window.location.reload(true); 
+	  window.location.reload(true); 
 	});
 
 	

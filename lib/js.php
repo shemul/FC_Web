@@ -46,4 +46,4 @@
 
 
 		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-		<script src="lib/socket.js" type="text/javascript"></script>
+		
