@@ -321,6 +321,13 @@
 		var f_sch_start = 	$('#f_sch_s_u').val();
 		var f_sch_end = 	$('#f_sch_e_u').val();
 		var f_status = 		$('#f_status_u').val();
+		var auto_flag ;
+		if(f_status == "Available" || f_status == "Busy" || f_status =="Gone") {
+			auto_flag = 0 ;
+		} else {
+			auto_flag = 1 ;
+		}
+
 
 		socket.emit('updateFaculty', { 
 
@@ -342,7 +349,8 @@
 			"f_sch_day" : 		f_sch_days,
 			"f_sch_start" : 	f_sch_start,
 			"f_sch_end" : 		f_sch_end,
-			"f_status" : 		f_status
+			"f_status" : 		f_status,
+			"auto_flag" : 		auto_flag
 		});
 
 		

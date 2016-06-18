@@ -250,7 +250,7 @@
 											<div class="card-actionbar-row">
 												<a class="btn btn-flat" id="demo" href="#">CANCEL</a>
 												<button type="button" id="addThisPerson" class="btn btn-flat btn-accent">ADD THIS PERSON</button>
-												<a class="btn btn-flat" id="test" href="#">test</a>
+												
 
 											</div><!--end .card-actionbar-row -->
 										</div><!--end .card-actionbar -->
@@ -321,12 +321,20 @@
 		<script type="text/html" id="skillTmpl">
 			<li class="clearfix">
 				<div class="row">
-					<div class="col-xs-5">
+					<div class="col-xs-2">
 						<div class="form-group">
 							<input type="text" class="form-control" id="f_schedule-<%=index%>" name="skill-<%=index%>">
 							<label for="skill-<%=index%>">Schedule <%=index%></label>
 						</div>
 					</div>
+
+					<div class="col-xs-2">
+						<div class="form-group">
+							<input type="text" class="form-control" id="f_schedule_room-<%=index%>" name="skill-<%=index%>">
+							<label for="skill-<%=index%>">Room No. <%=index%></label>
+						</div>
+					</div>
+
 
 					<div class="col-xs-3">
 						<div class="form-group">
@@ -363,7 +371,7 @@
 								<option value="19:00">19:00</option>	
 								<option value="20:00">20:00</option>	
 
-								<option value="00:00">00:00</option>
+								<option value="03:00">00:00</option>
 
 							</select>
 
@@ -391,7 +399,7 @@
 								<option value="19:00">19:00</option>	
 								<option value="20:00">20:00</option>	
 
-								<option value="02:00">02:00</option>
+								<option value="03:45">02:00</option>
 
 							</select>
 							<label for="skill-<%=index%>">End <%=index%></label>
@@ -404,8 +412,9 @@
 
 		<?php include 'lib/js.php'; ?>
 
-
+		<script src="lib/socket.js" type="text/javascript"></script>
 		<script type="text/javascript">
+
 
 				var schedules = [];
 
@@ -431,11 +440,14 @@
 					var count = listItems.length;
 					for (var i = 1; i <= count; i++) {
 						var schedules_name = $("#f_schedule-" + i).val();
+						var schedules_room = $("#f_schedule_room-" + i).val();						
 						var schedules_day = $("#f_sch_days-" + i).val();
 						var schedules_start = $("#f_sch_start-" + i).val();
 						var schedules_end = $("#f_sch_end-" + i).val();
+
 						var sch_object = { 
 							"schedules_name" : schedules_name, 
+							"schedules_room" : schedules_room,
 							"schedules_day"  : schedules_day,
 							"schedules_start" :schedules_start ,
 							"schedules_end"  : schedules_end
@@ -494,7 +506,8 @@
 							"f_sch_day" : 		f_sch_days,
 							"f_sch_start" : 	f_sch_start,
 							"f_sch_end" : 		f_sch_end,
-							"full_sch"  : schedules
+							"full_sch"  : 		schedules,
+							"auto_flag" : 		0
 						});
 
 						$('#successModal').notifyModal({ duration : 2500, placement : 'center', onTop : true, });

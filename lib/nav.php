@@ -103,10 +103,9 @@
 						<div class="card-body no-padding">
 							<ul class="nav nav-pills nav-stacked list">
 
-								<li><small>CATEGORIES</small></li>
 
 								<li class="active">
-									<a class="tile-content ink-reaction" href="#">All Faculty <small class="pull-right text-bold opacity-75">153</small></a>
+									<a class="tile-content ink-reaction" href="#">DEPARTMENTS <small class="pull-right text-bold opacity-75">04</small></a>
 								</li>
 
 								<li><a href="#">FBA <small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw " style="color:#008c44" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></small></a></li>
@@ -114,7 +113,6 @@
 								<li><a href="#">FSIT<small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw " style="color:#0072bc" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></small></a></li>
 								<li><a href="#">FASS<small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw " style="color:#c5281c" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></small></a></li>
 
-								<li class="hidden-xs"><small>LAST VIEWED</small></li>
 
 
 							</ul>
@@ -129,15 +127,13 @@
 						<div class="card-body no-padding">
 							<ul class="nav nav-pills nav-stacked list">
 
-								<li><small>TOOLS</small></li>
 
 								<li class="active">
-									<a class="tile-content ink-reaction" href="#">All Faculty <small class="pull-right text-bold opacity-75">153</small></a>
+									<a class="tile-content ink-reaction" href="#">ALL SHEILDS <small class="pull-right text-bold opacity-75">153</small></a>
 								</li>
 
 								<li><a href="javascript:reload_app();">REBOOT SHELIDS <small class="pull-right text-bold opacity-75"><i class="fa fa-circle fa-fw text-success" data-toggle="tooltip" data-placement="left" data-original-title="User online"></i></small></a></li>
 								
-								<li class="hidden-xs"><small>beta</small></li>
 
 
 							</ul>
